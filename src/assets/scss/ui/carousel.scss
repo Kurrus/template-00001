@@ -1,0 +1,143 @@
+.swiper{
+  &-wrapper{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &-container{
+    border-radius: 8px;
+    height: 100%;
+  }
+  &-slide{
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  &-container{
+  }
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+  }
+  &-pagination{
+    &-bullet{
+      width: 32px;
+      height: 3px;
+      border-radius: 8px;
+      background: var(--green3);
+      &-active{
+        background: var(--green);
+      }
+    }
+  }
+}
+.slider__body{
+  height: 100%;
+}
+.slider__image{
+  margin: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 30px);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  min-height: 360px;
+
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+.slider__card{
+  padding: 40px;
+  text-align: center;
+  box-shadow: var(--bs);
+  border: 1px solid rgba(0, 16, 61, 0.12);
+  width: calc(100% - 20px);
+  margin: 10px;
+  border-radius: 8px;
+  img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 27px;
+  }
+  p{
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+  span{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--gray);
+  }
+}
+@media (max-width: 1269.98px) {
+  .slider__card{
+    padding: 20px;
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .slider__card,
+  .slider__image{
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .slider__card{
+    padding: 20px;
+    img{
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    p{
+      margin-bottom: 5px;
+    }
+  }
+  .slider__card,
+  .slider__image{
+    min-height: 270px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .slider__image{
+    min-height: 290px;
+  }
+  .slider__card{
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .slider__card,
+  .slider__image{
+    min-height: 215px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .slider__card,
+  .slider__image{
+    min-height: 140px;
+  }
+}
+@media (max-width: 374.98px) {
+  .slider__card,
+  .slider__image{
+    min-height: 120px;
+  }
+}

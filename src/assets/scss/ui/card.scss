@@ -1,0 +1,207 @@
+.section__card-list{
+  height: 100%;
+}
+.all_products{
+  margin-bottom: 30px;
+  .section__card-list{
+    height: auto;
+  }
+}
+
+.swiper-slide{
+  height: auto !important;
+}
+.product__card {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: var(--bs);
+  padding-bottom: 15px;
+  transition: var(--easy);
+  cursor: pointer;
+  &:hover{
+    box-shadow: var(--bsa);
+  }
+  &-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-title {
+    margin-bottom: 6px;
+    p{
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: var(--black);
+    }
+  }
+
+  &-article {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--gray);
+    margin-bottom: 10px;
+  }
+
+  &-comment {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .star {
+
+    }
+
+    .comment {
+      svg{
+        path{
+          fill: var(--green);
+        }
+      }
+      span {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: var(--gray);
+        margin-left: 5px;
+      }
+    }
+  }
+
+
+
+  &-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    .price {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: var(--green);
+      &.line {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--purple);
+        text-decoration: line-through;
+      }
+    }
+
+    button {
+      background: linear-gradient(180deg, var(--purple3) 0%, var(--purple) 100%);
+      box-shadow: 0px 2px 0px var(--purple), inset -4px -4px 8px rgba(0, 0, 0, 0.25), inset 4px 4px 8px var(--purple4);
+      border-radius: 8px;
+      color: var(--white);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      min-width: 125px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--easy);
+      margin-top: auto;
+      &:hover{
+        background: linear-gradient(180deg,  var(--purple) 100%,#882079 0%);
+      }
+      &:active{
+        background: linear-gradient(180deg,  #882079 100%, var(--purple) 0%);
+      }
+      @media (max-width: 767.98px) {
+        font-size: 0;
+      }
+      svg{
+        margin-right: 16px;
+        @media (max-width: 767.98px) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 767.98px) {
+  .product__card-title p{
+    font-size: 14px;
+  }
+  .product__card-price button{
+    min-width: 60px;
+    max-width: 60px;
+    width: 100%;
+  }
+  .product__card-price .price{
+    font-size: 14px;
+  }
+  .product__card-comment .comment span,
+  .product__card-price .price.line{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product__card-title p{
+    font-size: 10px;
+    line-height: 1.2;
+  }
+  .product__card-article{
+
+  }
+  .product__card-price button{
+    min-width:100%;
+    max-width: 100%;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 10px;
+    svg{
+      margin-right: 10px;
+    }
+  }
+  .product__card-img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .product__card-price,
+  .product__card-comment{
+   flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .section__card-list{
+    padding: 5px;
+  }
+}
